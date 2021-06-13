@@ -1,0 +1,213 @@
+body{
+	background-color: black;
+	height: 1000px;
+}
+.space{
+	position: relative;
+	width: 160px;
+	height: 70px;
+	top: -550px;
+	margin-left: auto;
+	margin-right: auto;
+}
+
+.gif_space{
+	font-size: 70px;
+	font-family: 'Roboto Condensed', sans-serif;
+	color: white;
+	background: url(img/space_gif_1.gif) no-repeat;
+   -webkit-background-clip: text;
+   -webkit-text-fill-color: transparent;
+    animation-name: gif_scale;
+	animation-fill-mode: forwards;
+	animation-duration: 5s;
+}
+@keyframes gif_scale{
+	0%{transform: scale(1.0);}
+	100%{transform: scale(1.1);}
+}
+.space_fade_in{
+	position: absolute;
+	top: 0px;
+	font-size: 70px;
+	font-family: 'Roboto Condensed', sans-serif;
+	color: white;
+	opacity: 0;
+	transform: scale(1.05);
+	animation-name: fade_in;
+	animation-fill-mode: forwards;
+	animation-delay: 2s;
+	animation-duration: 3s;
+}
+@keyframes fade_in{
+	0%{opacity: 0;}
+	0%{transform: scale(1.05);}
+	100%{opacity: 1;}
+	100%{transform: scale(1.1);}
+}
+.astronaut{
+	position: absolute;
+	top: 200px;
+	right: 0px;
+	width: 400px;
+	height: 400px;
+	animation-name: astronaut;
+	opacity: 0;
+	animation-fill-mode: forwards;
+	animation-delay: 6s;
+	animation-duration: 1s;
+}
+.moon{
+	position: absolute;
+	top: 30px;
+	left: 50px;
+	animation-name: moon;
+	opacity: 0;
+	animation-fill-mode: forwards;
+	animation-delay: 6s;
+	animation-duration: 1s;
+}
+@keyframes moon{
+	0%{opacity: 0;}
+	0%{transform: translateX(0px);}
+	100%{opacity: 1;}
+	100%{transform: translateX(20px);}
+}
+@keyframes astronaut{
+	0%{opacity: 0;}
+	0%{transform: translateX(0px);}
+	100%{opacity: 1;}
+	100%{transform: translateX(-10px);}
+}
+.stars{
+	position: absolute;
+	top: 10px;
+	left: -30px;
+    opacity: 0;
+    transform: rotate(-20deg);
+    animation-name: fade;
+	animation-fill-mode: forwards;
+	animation-delay: 6s;
+	animation-duration: 1s;
+}
+@keyframes fade{
+	0%{opacity: 0;}
+	100%{opacity: 1;}
+}
+.question{
+	position: absolute;
+	width: 300px;
+	height: 60px;
+	top: 420px;
+	right: 350px;
+	transition: transform 250ms;
+}
+.question:hover{
+	transform: scale(1.01);
+}
+.inner{
+	position: absolute;
+	width: 300px;
+	height: 40px;
+    bottom: 0px;
+    border-top-left-radius: 20px;
+    border-bottom-left-radius: 20px;
+    border-bottom-right-radius: 20px;
+    background: #ced0ed;
+    opacity: 0;
+    animation-name: inner;
+	animation-fill-mode: forwards;
+	animation-delay: 8s;
+	animation-duration: 1s;
+}
+@keyframes inner{
+	0%{opacity: 0;}
+	60%{opacity: 1;}
+	100%{opacity: 1;}
+	100%{transform: translateX(-2px);}
+}
+.meteor{
+	position: relative;
+	top: -40px;
+    margin-left: auto;
+    left: 70px;
+    margin-right: auto;
+	width: 100px;
+	height: 650px;
+	transform: rotate(50deg);
+}
+.meteor_1{
+	opacity: 0;
+	animation-name: meteor;
+	animation-duration: 1.5s;
+	animation-delay: 3s;
+	animation-fill-mode: forwards;
+}
+@keyframes meteor{
+	0%{transform: translateY(0px);}
+	0%{opacity: 0;}
+	50%{opacity: 1;}
+	100%{transform: translateY(600px);}
+	100%{opacity: 0;}
+}
+.apollo{
+	position: relative;
+	margin-left: auto;
+	margin-right: auto;
+	width: 200px;
+	height: 120px;
+	top: -450px;
+	transform: rotate(20deg);
+	opacity: 0;
+    animation: apollo 1s;
+	animation-fill-mode: forwards;
+	animation-delay: 6s;
+}
+@keyframes apollo{
+	0%{opacity: 0;}
+	0%{transform: rotate(20deg);}
+	100%{opacity: 1;}
+	100%{transform: rotate(22deg);}
+}
+@keyframes apollo_1{
+	0%{opacity: 0;}
+	0%{transform: rotate(20deg);}
+	100%{opacity: 1;}
+	100%{transform: rotate(22deg);}
+}
+.text{
+    font-size: 25px;
+	letter-spacing: 3px;
+	font-family: 'Roboto Condensed', sans-serif;
+	color: black;
+	text-align: center;
+	position: absolute;
+	top: 7px;
+	width: 300px;
+	height: 25px;
+}
+.text_mark{
+	font-size: 25px;
+	font-family: 'Roboto Condensed', sans-serif;
+	color: black;
+	position: absolute;
+	width: 5px;
+	height: 25px;
+	top: 7px;
+	right: 27px;
+	animation: opacity_1 6s infinite;
+}
+@keyframes opacity_1{
+	0%{opacity: 0;}
+	10%{opacity: 1;}
+	20%{opacity: 0;}
+	30%{opacity: 1;}
+	40%{opacity: 0;}
+	50%{opacity: 1;}
+	60%{opacity: 0;}
+	70%{opacity: 1;}
+	80%{opacity: 0;}
+	90%{opacity: 1;}
+	100%{opacity: 0;}
+	
+}
